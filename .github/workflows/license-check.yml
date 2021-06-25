@@ -1,0 +1,18 @@
+---
+name: License Check
+
+on:
+  push:
+    branches:
+      - "latest"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    name: Check Licenses
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run `npm run licenses`
+        run: node . run licenses
