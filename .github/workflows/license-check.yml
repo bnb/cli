@@ -2,6 +2,7 @@
 name: License Check
 
 on:
+  workflow-dispatch:
   push:
     branches:
       - "latest"
